@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Rules</title>
+  <link rel="stylesheet" href="/static/rules.css">
+</head>
+
+<body>
+
+  <div class="login-page">
+    <div class="form" id="rules">
+
+      <div class='head'>
+        <h1 class='company'>Rules of the Game</h1>
+      </div>
+      <p class='msg'>Please read and follow these rules before you play the game!</p>
+
+      <form class="login-form">
+        <ol>
+          <li>Do not logout by clicking off the browser, you have to press the logout button.</li>
+          <li>Have fun!</li>
+          <li>If you have any issues, contact an admin!</li>
+        </ol>
+      </form>
+
+      <form action="{{ url_for('joined') }}" class="not_centered"
+        onSubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Please indicate that you have read and agreed to the rules.'); return false; }">
+
+        <input type="checkbox" name="checkbox" value="check" id="agree" /> I have read and agreed to the rules.
+        <button type="submit" name="submit"> Submit</button>
+      </form>
+
+    </div>
+  </div>
+
+</body>
+
+</html>

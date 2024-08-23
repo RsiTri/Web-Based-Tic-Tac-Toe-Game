@@ -1,0 +1,54 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(Pixeboy-z8XGD.ttf);
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    background-image: url("bkg.jpg");
+    background-size:cover;
+    font-family: 'myFirstFont';
+    font-size: x-large;
+}
+.reg{
+    position: relative;
+    left: 42%;
+    text-align: center;
+    border: 2px solid blue;
+    border-width: 1px 1px;
+    border-style:solid;
+    width: 350px;
+    overflow: hidden;
+    padding: 80px;
+    background: midnightblue;
+    border-radius: 15px ;
+    box-sizing: border-box;
+
+
+}
+h2{
+    position: relative;
+    left: 42%;
+    color: lightseagreen;
+    padding: 20px;
+}
+label{
+    color: firebrick;
+    font-size: 30px;
+}
+
+
+.subbox1{
+
+    width: 120px;
+    height: 30px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 7px;
+    color: blue;
+
+
+}
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+<div class="login-page">
+
+  <div class="form">
+
+    <div class='head'>
+
+      <h1 class='company'>Login</h1>
+      <div>
+        <p class='msg'>Welcome back, player!</p>
+        {% if request.args.get('wrong_user') %}
+        <p class="msg">The username doesn't exist in our servers! Please try again!</p>
+        {% endif %}
+        {% if request.args.get('wrong_password') %}
+        <p class="msg">Wrong password! Please try again!</p>
+        {% endif %}
+        {% if request.args.get('account_success') %}
+        <p class="msg">Successfully created an account! Try logging in!</p>
+        {% endif %}
+        <form name="login-form" action="{{ url_for('login') }}" method="POST">
+            <input type="text" name="username" placeholder="username" id="username"/>
+            <input type="password" name="password" placeholder="password" id="password"/>
+            <input type="submit" class="subbox1" value="Sign in">
+        </form>
+        <p class="message">Not registered? <a href="{{ url_for('register') }}">Create an account</a></p>
+    </div>
+</div>
+</body>
+</html>
